@@ -1,0 +1,20 @@
+#This function creates a special "matrix" object that can cache its inverse.
+makeCacheMatrix <- function(x = numeric() {
+    # keep the cached value or if nothing cached
+    # set cache = 0 for initial value
+    cache<-NULL
+    
+    set<-function(y){
+        x<<-y
+        cache<<-NULL
+    }
+    
+    get<- function()X
+    
+    setinverse<-function(inverse) cache<<-inverse
+    
+    getinverse<-function() cache
+    list(set = set, get = get,
+         setinverse = setinverse,
+         getinverse = getinverse)
+}
